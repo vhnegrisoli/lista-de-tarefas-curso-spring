@@ -1,4 +1,4 @@
-package listadecategorias.listadecategorias.controller;
+package listadetarefas.listadetarefas.controller;
 
 import listadetarefas.listadetarefas.model.Categoria;
 import listadetarefas.listadetarefas.service.CategoriaService;
