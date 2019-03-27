@@ -20,17 +20,18 @@ Categorias:
 GET:
 
 Lista todas as categorias:
-"http://localhost:8080/api/categorias/todas"
+http://localhost:8080/api/categorias/todas
 
 Busca uma categoria:
-"http://localhost:8080/api/categorias/buscar/id"
+http://localhost:8080/api/categorias/buscar/id
 
 Remove uma categoria:
-"http://localhost:8080/api/categorias/delete/id"
+http://localhost:8080/api/categorias/delete/id
 
 POST:
+
 Salva uma categoria:
-"http://localhost:8080/api/categorias/salvar"
+http://localhost:8080/api/categorias/salvar
 
 JSON: { "id":value, "descricao":"value" }
 
@@ -39,15 +40,16 @@ Usuários:
 GET:
 
 Lista todos os usuários:
-"http://localhost:8080/api/usuários/todos"
+http://localhost:8080/api/usuários/todos
 
 Busca um usuário:
-"http://localhost:8080/api/usuários/buscar/id"
+http://localhost:8080/api/usuários/buscar/id
 
 Remove um usuário:
-"http://localhost:8080/api/usuários/delete/id"
+http://localhost:8080/api/usuários/delete/id
 
 POST:
+
 Salva um usuário:
 "http://localhost:8080/api/usuários/salvar"
 
@@ -59,22 +61,23 @@ Tarefas:
 GET:
 
 Lista todas as tarefas:
-"http://localhost:8080/api/tarefas/todas"
+http://localhost:8080/api/tarefas/todas
 
 Busca uma tarefa:
-"http://localhost:8080/api/tarefas/buscar/id"
+http://localhost:8080/api/tarefas/buscar/id
 
 Remove uma tarefa:
-"http://localhost:8080/api/tarefas/delete/id"
+http://localhost:8080/api/tarefas/delete/id
 
 Inicia uma tarefa:
-"http://localhost:8080/api/tarefas/fazer/id"
+http://localhost:8080/api/tarefas/fazer/id
 
 Finaliza uma tarefa:
-"http://localhost:8080/api/tarefas/finalizar/id"
+http://localhost:8080/api/tarefas/finalizar/id
 
 POST:
+
 Salva uma tarefa:
-"http://localhost:8080/api/categorias/salvar"
+http://localhost:8080/api/categorias/salvar
 
 JSON: { "id":value, "tarefa":"value", "categorias":{"id":"value"}, "usuarios":[{"id":"value"}] }
