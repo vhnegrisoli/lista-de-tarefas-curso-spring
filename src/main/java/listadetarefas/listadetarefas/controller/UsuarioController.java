@@ -14,7 +14,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping("/todas")
+    @GetMapping("/todos")
     public List<Usuario> findAll() {
         return usuarioService.buscarTodosOsUsuarios();
     }
