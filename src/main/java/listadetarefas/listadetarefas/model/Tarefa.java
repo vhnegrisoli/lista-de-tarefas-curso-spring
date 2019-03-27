@@ -33,7 +33,11 @@ public class Tarefa {
     private TarefaStatusEnum status;
 
     @Column(name = "data_tarefa")
+    @NotNull
     private LocalDate dataTarefa;
+
+    @Column(name = "ultima_atualizacao")
+    private LocalDate ultimaAtualizacao;
 
     @NotNull
     @ManyToOne
