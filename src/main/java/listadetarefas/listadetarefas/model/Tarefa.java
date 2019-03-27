@@ -20,7 +20,7 @@ import java.util.List;
 public class Tarefa {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
@@ -43,8 +43,8 @@ public class Tarefa {
     @ManyToMany
     @JoinTable(
             name = "usuarios_tarefas",
-            joinColumns = @JoinColumn(name = "tarefa_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"))
+            joinColumns = @JoinColumn(name = "tarefa_id"),
+            inverseJoinColumns = @JoinColumn(name = "usuario_id"))
     private List<Usuario> usuarios;
 
 }
