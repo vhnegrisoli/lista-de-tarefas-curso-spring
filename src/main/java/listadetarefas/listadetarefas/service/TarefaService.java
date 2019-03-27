@@ -17,6 +17,8 @@ public class TarefaService {
     @Autowired
     private TarefaRepository tarefaRepository;
 
+    static final ValidationException TAREFA_NAO_ENCONTRADA = new ValidationException("Tarefa não encontrada");
+
     public void save(Tarefa tarefa) {
         if (isNovaTarefa(tarefa)) {
             tarefa.setStatus(TarefaStatusEnum.ABERTA);
@@ -26,7 +28,9 @@ public class TarefaService {
         tarefaRepository.save(tarefa);
     }
 
-    public void alterarStatusFazendoTarefa(Tarefa tarefa) {
+    public void alterarStatusFazendoTarefa(int id) {
+        Tarefa tarefa = tarefaRepository.findById(id)
+                .orElseThrow(() -> TAREFA_NAO_ENCONTRADA);
         if (!isNovaTarefa(tarefa)) {
             tarefa.setStatus(TarefaStatusEnum.FAZENDO);
             tarefa.setUltimaAtualizacao(LocalDate.now());
@@ -34,7 +38,9 @@ public class TarefaService {
         tarefaRepository.save(tarefa);
     }
 
-    public void finalizarTarefa(Tarefa tarefa) {
+    public void finalizarTarefa(int id) {
+        Tarefa tarefa = tarefaRepository.findById(id)
+                .orElseThrow(() -> TAREFA_NAO_ENCONTRADA);
         if (!isNovaTarefa(tarefa)) {
             tarefa.setStatus(TarefaStatusEnum.FINALIZADA);
             tarefa.setUltimaAtualizacao(LocalDate.now());
@@ -52,10 +58,12 @@ public class TarefaService {
 
     public Tarefa buscarUmaTarefa(int id) {
         return tarefaRepository.findById(id)
-            .orElseThrow(() -> new ValidationException("Tarefa não encontrada."));
+            .orElseThrow(() -> TAREFA_NAO_ENCONTRADA);
     }
 
-    public void delete(Tarefa tarefa) {
+    public void delete(int id) {
+        Tarefa tarefa = tarefaRepository.findById(id)
+                .orElseThrow(() -> TAREFA_NAO_ENCONTRADA);
         tarefaRepository.delete(tarefa);
     }
 
