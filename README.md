@@ -1,8 +1,9 @@
 # lista-de-tarefas-curso-spring
-Aplicação de listagem de tarefas de usuários feita em Spring Boot para o curso de Desenvolvimento Java Spring pelos alunos Victor Hugo Negrisoli e Rafael Nonino Filho na UniFil.
+Aplicação de listagem de tarefas de usuários feita em Spring Boot para o curso de desenvolvimento Java/Spring, ministrado pelos alunos Victor Hugo Negrisoli e Rafael Nonino Filho do curso de Ciência da Computação pelo Centro Universitário Filadélfia (UniFil).
 
 Docentes: Victor Hugo Negrisoli, Rafael Nonino Filho 
-Curso: Desenvolvimento de API REST em Java com Spring Boot (Centro Universitário Filadélfia - UNIFIL)
+Duração: 3 dias/12 horas.
+Curso: Criando um aplicativo web com Java e Spring Boot usando serviços de API REST (Centro Universitário Filadélfia - UNIFIL)
 
 Tecnologias:
 * Linguagem de programação JAVA
