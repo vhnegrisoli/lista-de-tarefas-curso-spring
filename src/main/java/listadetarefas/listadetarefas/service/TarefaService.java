@@ -23,8 +23,8 @@ public class TarefaService {
         if (isNovaTarefa(tarefa)) {
             tarefa.setStatus(TarefaStatusEnum.ABERTA);
             tarefa.setDataTarefa(LocalDate.now());
-            tarefa.setUltimaAtualizacao(LocalDate.now());
         }
+        tarefa.setUltimaAtualizacao(LocalDate.now());
         tarefaRepository.save(tarefa);
     }
 

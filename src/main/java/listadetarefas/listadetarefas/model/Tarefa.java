@@ -32,8 +32,7 @@ public class Tarefa {
     @Enumerated(EnumType.STRING)
     private TarefaStatusEnum status;
 
-    @Column(name = "data_tarefa")
-    @NotNull
+    @Column(name = "data_tarefa", nullable = false, updatable = false)
     private LocalDate dataTarefa;
 
     @Column(name = "ultima_atualizacao")
