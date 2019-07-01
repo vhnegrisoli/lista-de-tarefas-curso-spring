@@ -24,10 +24,10 @@ Lista todas as categorias:
 http://localhost:8080/api/categorias/todas
 
 Busca uma categoria:
-http://localhost:8080/api/categorias/buscar/id
+http://localhost:8080/api/categorias/buscar/{id}
 
 Remove uma categoria:
-http://localhost:8080/api/categorias/delete/id
+http://localhost:8080/api/categorias/delete/{id}
 
 POST:
 
@@ -44,10 +44,10 @@ Lista todos os usuários:
 http://localhost:8080/api/usuários/todos
 
 Busca um usuário:
-http://localhost:8080/api/usuários/buscar/id
+http://localhost:8080/api/usuários/buscar/{id}
 
 Remove um usuário:
-http://localhost:8080/api/usuários/delete/id
+http://localhost:8080/api/usuários/delete/{id}
 
 POST:
 
@@ -65,16 +65,16 @@ Lista todas as tarefas:
 http://localhost:8080/api/tarefas/todas
 
 Busca uma tarefa:
-http://localhost:8080/api/tarefas/buscar/id
+http://localhost:8080/api/tarefas/buscar/{id}
 
 Remove uma tarefa:
-http://localhost:8080/api/tarefas/delete/id
+http://localhost:8080/api/tarefas/delete/{id}
 
 Inicia uma tarefa:
-http://localhost:8080/api/tarefas/fazer/id
+http://localhost:8080/api/tarefas/fazer/{id}
 
 Finaliza uma tarefa:
-http://localhost:8080/api/tarefas/finalizar/id
+http://localhost:8080/api/tarefas/finalizar/{id}
 
 POST:
 
