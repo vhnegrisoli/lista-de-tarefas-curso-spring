@@ -5,6 +5,7 @@ import listadetarefas.listadetarefas.service.TarefaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -43,5 +44,20 @@ public class TarefaController {
     @GetMapping("/delete/{id}")
     public void deleteTarefa(@PathVariable int id) {
         tarefaService.delete(id);
+    }
+
+    @GetMapping("/por-categorias/{idCategoria}")
+    public List<Tarefa> findByCategoria(@PathVariable(value = "idCategoria") Integer idCategoria) {
+        return tarefaService.findByCategoria(idCategoria);
+    }
+
+    @GetMapping("/por-usuarios/{idUsuario}")
+    public List<Tarefa> findByUsuarios(@PathVariable(value = "idUsuario") Integer idUsuario) {
+        return tarefaService.findByUsuarios(idUsuario);
+    }
+
+    @GetMapping("/por-data")
+    public List<Tarefa> findByUsuarios(@PathParam(value = "dataInicial") String dataInicial, @PathParam("dataFinal") String dataFinal) {
+        return tarefaService.findByDataInicialAndDataFinal(dataInicial, dataFinal);
     }
 }
